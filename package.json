@@ -1,0 +1,24 @@
+{
+  "name": "tcp-rooms",
+  "version": "0.0.0-alpha",
+  "description": "This application manages TCP/IP connections between multiple clients.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JJetmar/tcp-rooms.git"
+  },
+  "keywords": [
+    "tcp",
+    "rooms",
+    "tcp/ip"
+  ],
+  "author": "JJetmar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JJetmar/tcp-rooms/issues"
+  },
+  "homepage": "https://github.com/JJetmar/tcp-rooms#readme"
+}
