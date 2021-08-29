@@ -3,7 +3,7 @@ const fs = require('fs').promises;
 
 const roomConnections = new Map();
 
-const PORT = process.env.PORT || 8124;
+const PORT = process.env.TCP_PORT || 8124;
 
 // states
 const LOGGED_IN = "LOGGED_IN";
