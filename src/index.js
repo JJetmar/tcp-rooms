@@ -46,7 +46,7 @@ const server = net.createServer((c) => {
                             c.end()
                         }
                     }).catch((err) => {
-                        c.write(`Error. ${err.message}\r\n`)
+                        c.write(`Invalid credentials.\r\n`)
                         c.end()
                 });
                 break;
