@@ -45,7 +45,10 @@ const server = net.createServer((c) => {
                             c.write(`Invalid credentials.\r\n`)
                             c.end()
                         }
-                    });
+                    }).catch((err) => {
+                        c.write(`Error. ${err.message}\r\n`)
+                        c.end()
+                });
                 break;
             case LOGGED_IN:
                 roomConnections.get(room)
