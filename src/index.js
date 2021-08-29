@@ -3,6 +3,8 @@ const fs = require('fs').promises;
 
 const roomConnections = new Map();
 
+const PORT = process.env.PORT || 8124;
+
 // states
 const LOGGED_IN = "LOGGED_IN";
 const REQUIRE_ROOM_NAME = "REQUIRE_ROOM";
@@ -58,6 +60,6 @@ server.on('error', (err) => {
     throw err;
 });
 
-server.listen(process.env.PORT || 8124, () => {
-    console.log('Server started');
+server.listen(PORT, () => {
+    console.log(`Server started at port ${PORT}`);
 });
