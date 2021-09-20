@@ -1,5 +1,6 @@
 const net = require('net');
 const fs = require('fs').promises;
+const path = require('path');
 
 const roomConnections = new Map();
 
@@ -30,7 +31,7 @@ const server = net.createServer((c) => {
                 break;
             case REQUIRE_PASSWORD:
                 password = String(data).trim();
-                fs.readFile('../resources/rooms.csv')
+                fs.readFile(path.resolve(__dirname, '../resources/rooms.csv'))
                     .then(data => String(data).split(/\r?\n/))
                     .then(data => data.map(lines => lines.split(/\s*;\s*/)))
                     .then(rooms => rooms.find(([roomName, roomPassword]) =>
